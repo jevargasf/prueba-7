@@ -28,5 +28,8 @@
     "pg-cursor": "^2.9.0",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.29.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.0"
   }
 }
