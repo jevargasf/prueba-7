@@ -6,7 +6,6 @@ const PaisesPib = database.define('paises_pib', {
     // estructura de la tabla
     nombre_pais: {
         type: DataTypes.STRING(200),
-        primaryKey: true,
         allowNull: false
     },
     pib_2019: {
@@ -21,6 +20,5 @@ const PaisesPib = database.define('paises_pib', {
     timestamps: false
 })
 
-PaisesPib.belongsTo(Paises, { foreignKey: 'nombre' });
 
 export default PaisesPib

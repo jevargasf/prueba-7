@@ -1,5 +1,7 @@
 import { DataTypes } from 'sequelize'
 import database from '../config/db.js'
+import PaisesDataWeb from './Paises_data_web.js'
+import PaisesPib from './Paises_pib.js'
 
 
 const Paises = database.define('paises', {
@@ -20,5 +22,17 @@ const Paises = database.define('paises', {
 }, {
     timestamps: false
 })
+
+/*Paises.hasOne(PaisesPib, {
+    onDelete: 'RESTRICT',
+    onUpdate: 'RESTRICT'
+})
+PaisesPib.belongsTo(Paises, { foreignKey: 'nombre' })
+Paises.hasOne(PaisesDataWeb, {
+    onDelete: 'RESTRICT',
+    onUpdate: 'RESTRICT'
+})
+PaisesDataWeb.belongsTo(Paises, { foreignKey: 'nombre' })*/
+
 
 export default Paises

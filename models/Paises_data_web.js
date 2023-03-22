@@ -1,11 +1,9 @@
 import { DataTypes } from 'sequelize'
 import database from '../config/db.js'
 
-
 const PaisesDataWeb = database.define('paises_data_web', {
     nombre_pais: {
         type: DataTypes.STRING(200),
-        primaryKey: true,
         allowNull: false
     },
     accion: {
@@ -16,6 +14,6 @@ const PaisesDataWeb = database.define('paises_data_web', {
     timestamps: false
 })
 
-PaisesDataWeb.belongsTo(Paises, { foreignKey: 'nombre' })
+//PaisesDataWeb.belongsTo(Paises)
 
 export default PaisesDataWeb
