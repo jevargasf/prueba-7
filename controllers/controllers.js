@@ -83,7 +83,6 @@ try {
                 id: registroAgregar.dataValues.id 
             }
         })
-        console.log(registroAgregar.dataValues)
 
         res.status(201).json({ mensaje: "Registro actualizado exitosamente. Presione 'Agregar un registro' si desea ingresar más datos." })
         }

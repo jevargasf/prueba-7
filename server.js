@@ -37,8 +37,6 @@ app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded());
 
-// habilitar requests en formato content-type - application/x-www-form-urlencoded
-//routerNoticias.use(express.urlencoded({extended: true}))
 
 // rutas
 app.use(router)

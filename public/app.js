@@ -1,6 +1,5 @@
 // Inicialización elementos DOM
 const listarRegistros = document.getElementById("listarRegistros")
-const btnRegistros = document.getElementsByClassName("btnRegistros")
 const agregarRegistro = document.getElementById("agregarRegistro")
 const borrarRegistro = document.getElementById("borrarRegistro")
 
@@ -13,7 +12,6 @@ const borrarRegistro = document.getElementById("borrarRegistro")
             const pageSize = 5
             const res = await axios(`http://localhost:8000/paises?page=${page}&pageSize=${pageSize}`)
             const cantidadPaginas = parseInt(res.data.count/pageSize)+1
-            console.log(res.data)
 
             contenedorData.innerHTML=`
             <table class="table">
@@ -36,7 +34,7 @@ const borrarRegistro = document.getElementById("borrarRegistro")
             for (i=1; i <= cantidadPaginas; i++) {
                 const numeral = document.createElement("button")
                 numeral.setAttribute("id", i)
-                numeral.setAttribute("class", "btn btn-link btnRegistros")
+                numeral.setAttribute("class", "btn btn-link")
                 numeral.setAttribute('onclick', `btnPagina(${i})`)
                 numeral.innerHTML = i
                 paginador.appendChild(numeral)
