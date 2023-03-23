@@ -27,7 +27,8 @@
     "pg": "^8.10.0",
     "pg-cursor": "^2.9.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.29.3"
+    "sequelize": "^6.29.3",
+    "sequelize-cursor-pagination": "^3.4.0"
   },
   "devDependencies": {
     "babel-register": "^6.26.0",
